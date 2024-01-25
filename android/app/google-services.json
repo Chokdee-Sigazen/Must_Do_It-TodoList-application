@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "689807811157",
+    "project_id": "mustdoit-application",
+    "storage_bucket": "mustdoit-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689807811157:android:1426d1a58307dd5091aadc",
+        "android_client_info": {
+          "package_name": "com.example.must_do_it"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuI-Nhjo8IjtmLERPLKKH6_rd1xgFkbEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
