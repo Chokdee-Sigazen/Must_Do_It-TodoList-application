@@ -33,6 +33,7 @@ class _EnterTextInputState extends State<EnterTextInput> {
   Future openDialog() => showDialog(
         context: context,
         builder: (context) => AlertDialog(
+          backgroundColor: Color.fromARGB(255, 251, 225, 220),
           title: Text(
             "Add Must Do List",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
@@ -55,9 +56,12 @@ class _EnterTextInputState extends State<EnterTextInput> {
                 controller: detailController,
                 decoration: InputDecoration(hintText: "Enter detail"),
               ),
-              OutlinedButton(
-                onPressed: click,
-                child: Text("Add"),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: FilledButton(
+                  onPressed: click,
+                  child: Text("Add"),
+                ),
               )
             ],
           ),
@@ -68,7 +72,7 @@ class _EnterTextInputState extends State<EnterTextInput> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        OutlinedButton(
+        FilledButton(
           onPressed: openDialog,
           child: Text("New Must Do"),
         )

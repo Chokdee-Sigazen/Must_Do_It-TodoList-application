@@ -66,6 +66,31 @@ class _ToDoListFieldState extends State<ToDoListField> {
                           ),
                         ],
                       ),
+                      endActionPane: ActionPane(
+                        // A motion is a widget used to control how the pane animates.
+                        motion: ScrollMotion(),
+
+                        // A pane can dismiss the Slidable.
+                        dismissible: DismissiblePane(onDismissed: () {
+                          checkDone(toDolist.click);
+                        }),
+
+                        // All actions are defined in the children parameter.
+                        children: [
+                          // A SlidableAction can have an icon and/or a label.
+                          SlidableAction(
+                            onPressed: (context) {
+                              checkDone(toDolist.click);
+                            },
+                            backgroundColor: toDolist.done
+                                ? Color(0xffC3AED6)
+                                : Color(0xff514075),
+                            foregroundColor: Colors.white,
+                            icon: Icons.check_box,
+                            label: 'Done',
+                          ),
+                        ],
+                      ),
                       child: Row(children: [
                         Expanded(
                           child: ListTile(
@@ -135,6 +160,31 @@ class _ToDoListFieldState extends State<ToDoListField> {
                             foregroundColor: Colors.white,
                             icon: Icons.delete,
                             label: 'Delete',
+                          ),
+                        ],
+                      ),
+                      endActionPane: ActionPane(
+                        // A motion is a widget used to control how the pane animates.
+                        motion: ScrollMotion(),
+
+                        // A pane can dismiss the Slidable.
+                        dismissible: DismissiblePane(onDismissed: () {
+                          checkDone(toDolist.click);
+                        }),
+
+                        // All actions are defined in the children parameter.
+                        children: [
+                          // A SlidableAction can have an icon and/or a label.
+                          SlidableAction(
+                            onPressed: (context) {
+                              checkDone(toDolist.click);
+                            },
+                            backgroundColor: toDolist.done
+                                ? Color(0xffEFBBCF)
+                                : Color(0xffB4436D),
+                            foregroundColor: Colors.white,
+                            icon: Icons.check_box,
+                            label: 'Done',
                           ),
                         ],
                       ),
